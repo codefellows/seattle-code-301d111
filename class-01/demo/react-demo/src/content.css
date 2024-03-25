@@ -1,0 +1,9 @@
+.deck {
+  display:flex;
+  justify-content: space-around;
+}
+
+.card {
+  border: 1px solid green;
+  padding: 10px;
+}
