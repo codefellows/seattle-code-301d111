@@ -1,0 +1,13 @@
+header {
+  background: #111;
+  color: #efefef;
+  padding: 1em;
+  display:flex;
+  justify-content: space-between;
+
+
+}
+
+header img {
+  height: 4em;
+}
