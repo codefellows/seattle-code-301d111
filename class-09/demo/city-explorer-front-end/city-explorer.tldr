@@ -1,0 +1,463 @@
+{
+	"tldrawFileFormatVersion": 1,
+	"schema": {
+		"schemaVersion": 1,
+		"storeVersion": 4,
+		"recordVersions": {
+			"asset": {
+				"version": 1,
+				"subTypeKey": "type",
+				"subTypeVersions": {
+					"image": 3,
+					"video": 3,
+					"bookmark": 1
+				}
+			},
+			"camera": {
+				"version": 1
+			},
+			"document": {
+				"version": 2
+			},
+			"instance": {
+				"version": 24
+			},
+			"instance_page_state": {
+				"version": 5
+			},
+			"page": {
+				"version": 1
+			},
+			"shape": {
+				"version": 3,
+				"subTypeKey": "type",
+				"subTypeVersions": {
+					"group": 0,
+					"text": 1,
+					"bookmark": 2,
+					"draw": 1,
+					"geo": 8,
+					"note": 5,
+					"line": 4,
+					"frame": 0,
+					"arrow": 3,
+					"highlight": 0,
+					"embed": 4,
+					"image": 3,
+					"video": 2
+				}
+			},
+			"instance_presence": {
+				"version": 5
+			},
+			"pointer": {
+				"version": 1
+			}
+		}
+	},
+	"records": [
+		{
+			"gridSize": 10,
+			"name": "",
+			"meta": {},
+			"id": "document:document",
+			"typeName": "document"
+		},
+		{
+			"id": "pointer:pointer",
+			"typeName": "pointer",
+			"x": 775.1925621926786,
+			"y": 147.71049524346984,
+			"lastActivityTimestamp": 1712254408370,
+			"meta": {}
+		},
+		{
+			"meta": {},
+			"id": "page:page",
+			"name": "Page 1",
+			"index": "a1",
+			"typeName": "page"
+		},
+		{
+			"x": -93.74999627470982,
+			"y": 6.2499997516473655,
+			"z": 1,
+			"meta": {},
+			"id": "camera:page:page",
+			"typeName": "camera"
+		},
+		{
+			"editingShapeId": "shape:xusl6q8vqruIpY1A20Crl",
+			"croppingShapeId": null,
+			"selectedShapeIds": [
+				"shape:xusl6q8vqruIpY1A20Crl"
+			],
+			"hoveredShapeId": "shape:xusl6q8vqruIpY1A20Crl",
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:page",
+			"pageId": "page:page",
+			"typeName": "instance_page_state"
+		},
+		{
+			"followingUserId": null,
+			"opacityForNextShape": 1,
+			"stylesForNextShape": {
+				"tldraw:geo": "rectangle",
+				"tldraw:dash": "solid",
+				"tldraw:horizontalAlign": "start",
+				"tldraw:size": "s",
+				"tldraw:color": "blue"
+			},
+			"brush": null,
+			"scribbles": [],
+			"cursor": {
+				"type": "default",
+				"rotation": 0
+			},
+			"isFocusMode": false,
+			"exportBackground": true,
+			"isDebugMode": false,
+			"isToolLocked": false,
+			"screenBounds": {
+				"x": 0,
+				"y": 0,
+				"w": 1540.2777099609375,
+				"h": 668.75
+			},
+			"insets": [
+				false,
+				true,
+				true,
+				false
+			],
+			"zoomBrush": null,
+			"isGridMode": false,
+			"isPenMode": false,
+			"chatMessage": "",
+			"isChatting": false,
+			"highlightedUserIds": [],
+			"canMoveCamera": true,
+			"isFocused": true,
+			"devicePixelRatio": 1.440000057220459,
+			"isCoarsePointer": false,
+			"isHoveringCanvas": true,
+			"openMenus": [],
+			"isChangingStyle": false,
+			"isReadonly": false,
+			"meta": {},
+			"duplicateProps": null,
+			"id": "instance:instance",
+			"currentPageId": "page:page",
+			"typeName": "instance"
+		},
+		{
+			"x": 201.28038024902344,
+			"y": 76.50824737548828,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:Tj5tpkfolqhbmiMeoYHhB",
+			"type": "geo",
+			"props": {
+				"w": 373.44288635253906,
+				"h": 487.2042770385742,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "solid",
+				"size": "s",
+				"font": "draw",
+				"text": "",
+				"align": "start",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": ""
+			},
+			"parentId": "page:page",
+			"index": "a1",
+			"typeName": "shape"
+		},
+		{
+			"x": 239.7026824951172,
+			"y": 118.00129699707031,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:e8jGTw5uRWXFTG72tffxC",
+			"type": "geo",
+			"props": {
+				"w": 286.39320373535156,
+				"h": 31.681320190429688,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "solid",
+				"size": "s",
+				"font": "draw",
+				"text": "",
+				"align": "start",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": ""
+			},
+			"parentId": "page:page",
+			"index": "a2",
+			"typeName": "shape"
+		},
+		{
+			"x": 248.3940887451172,
+			"y": 201.52993774414062,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:lxrjkjh1wERwHsRiJhwE4",
+			"type": "geo",
+			"props": {
+				"w": 277.82386779785156,
+				"h": 142.25802612304688,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "solid",
+				"size": "s",
+				"font": "draw",
+				"text": "",
+				"align": "start",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": ""
+			},
+			"parentId": "page:page",
+			"index": "a3",
+			"typeName": "shape"
+		},
+		{
+			"x": 252.74520874023438,
+			"y": 384.4834899902344,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:GPcSxfmb6RD3ak4gJ36lN",
+			"type": "geo",
+			"props": {
+				"w": 134.26107788085938,
+				"h": 159.85244750976562,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "solid",
+				"size": "s",
+				"font": "draw",
+				"text": "",
+				"align": "start",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": ""
+			},
+			"parentId": "page:page",
+			"index": "a4",
+			"typeName": "shape"
+		},
+		{
+			"x": 281.1574401855469,
+			"y": 120.98523139953613,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:vERix4WBCUzpQkciPlvix",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 148.4609375,
+				"text": "<SearchForm />",
+				"font": "draw",
+				"align": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a5",
+			"typeName": "shape"
+		},
+		{
+			"x": 274.6090393066406,
+			"y": 227.76963996887207,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:9dIdpmN4EZDJDfuK-srNa",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 80.0798568725586,
+				"text": "<Map />",
+				"font": "draw",
+				"align": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a6",
+			"typeName": "shape"
+		},
+		{
+			"x": 257.4296875,
+			"y": 168.32139778137207,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:HtOELxE8_ACxHQoDrKSJ9",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 75.14279174804688,
+				"text": "<City />",
+				"font": "draw",
+				"align": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a7",
+			"typeName": "shape"
+		},
+		{
+			"x": 257.35101318359375,
+			"y": 423.7955799102783,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:v-_RscwPeq3QoErJdnoSY",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 119.85850524902344,
+				"text": "<Weather />",
+				"font": "draw",
+				"align": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a8",
+			"typeName": "shape"
+		},
+		{
+			"x": 408.02947998046875,
+			"y": 384.1905212402344,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:zPFkOzLeb_ebAhjNq0qHt",
+			"type": "geo",
+			"props": {
+				"w": 134.26107788085938,
+				"h": 159.85244750976562,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "solid",
+				"size": "s",
+				"font": "draw",
+				"text": "",
+				"align": "start",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": ""
+			},
+			"parentId": "page:page",
+			"index": "a9",
+			"typeName": "shape"
+		},
+		{
+			"x": 412.6352844238281,
+			"y": 423.5026111602783,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:B69Hq-nyaelxr8TTTLLeN",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 104.36370849609375,
+				"text": "<Movies />",
+				"font": "draw",
+				"align": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aA",
+			"typeName": "shape"
+		},
+		{
+			"x": 391.4682922363281,
+			"y": 39.08962440490723,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:NYPXis_KXYDRvg91-h266",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 74.64366149902344,
+				"text": "<App />",
+				"font": "draw",
+				"align": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aB",
+			"typeName": "shape"
+		},
+		{
+			"x": 645.7353308035268,
+			"y": 66.08615281736405,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:xusl6q8vqruIpY1A20Crl",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "s",
+				"w": 826.73779296875,
+				"text": "1. In <SearchForm />, user types in city & we send that back to the App.js\n2. Now, the App.jsx has {city} as a variable in a function (called by SearchForm)\n3. In that function, put {city} into state and fetch location from OUR API SERVER\n    - Put {location} into state\n    - Once we have {location} in state, the <City /> & <Map /> components will re-render\n\n4. Once we have the lat/lon from our API, then we fetch Weather\n5. Once we fetch Weather, put an array of weather into state\n    - As that happens, the <Weather /> component will render itself\n\n6. Fetch the Movies\n7. Once we fetch Movies, put an array of movies into state\n    - As that happens the <Movies /> component will render itself\n\n100% of our application state is saved and managed in App.jsx\n100% of our fetch calls are done in App.jsx\n\nOur components are \"dumb\" ... they just get the data from App.jsx and render it out",
+				"font": "draw",
+				"align": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aC",
+			"typeName": "shape"
+		}
+	]
+}
