@@ -27,7 +27,7 @@ function Content(props) {
     }
   }, []);
 
-  render() {
+  return (
     <>
       <h1>Books We Love</h1>
       <ul>
@@ -36,7 +36,6 @@ function Content(props) {
         ))}
       </ul>
     </>
-    )
-  }
+  );
 
   export default withAuth0(Content);
