@@ -14,7 +14,7 @@ root.render(
       redirectUri={import.meta.env.VITE_AUTH_REDIRECT_URI}
     >
       <App />
-    </Auth0Provider>,
+    </Auth0Provider>
   </React.StrictMode>
 );
 

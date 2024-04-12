@@ -4,20 +4,23 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const Book = require('./models/bookModel');
+
 const verifyUser = require('./auth/authorize.js');
+const Book = require('./models/bookModel');
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
+// This will run the verifyUser function on EVERY REQUEST
+// So ... if the user is valid (token sent from client), the routes will work.
+// Each route will have req.user available so you can reference the user's information
+
+// If the user is not authenticated, then the server will send a "Not Authorized" response
+app.use(verifyUser);
+
 const PORT = process.env.PORT || 3001;
 mongoose.connect(process.env.MONGO_URL)
-
-// This will run the "verify" code on every route automatically
-// If the user is valid, we'll have them in request.user in every route!
-// If not, it'll throw an error for us
-app.use(verifyUser);
 
 app.get('/test', (request, response) => {
   response.send('test request received')
@@ -26,23 +29,27 @@ app.get('/test', (request, response) => {
 app.get('/books', handleGetBooks);
 app.post('/books', handlePostBooks);
 app.delete('/books/:id', handleDeleteBooks);
-app.put('/books/:id', handlePutBooks);
-app.get('/user', handleGetUser);
+app.put('/books/:id', handlePutBooks)
 
 async function handleGetBooks(req, res) {
+
+  const searchObject = {}
+
   try {
-    const books = await Book.find({ email: req.user.email });
-    res.send(books);
-  } catch (error) {
-    console.error(error);
-    res.status(400).send('Could not find books');
+    const booksFromDb = await Book.find(searchObject);
+    res.status(200).send(booksFromDb);
+  } catch (e) {
+    console.error(e);
+    res.status(500).send('server error');
   }
 }
 
+
 async function handlePostBooks(req, res) {
+
   const { title, description, status } = req.body;
   try {
-    const newBook = await Book.create({ ...req.body, email: req.user.email })
+    const newBook = await Book.create({ ...req.body })
     res.status(200).send(newBook)
   } catch (e) {
     res.status(500).send('server error');
@@ -50,10 +57,11 @@ async function handlePostBooks(req, res) {
 }
 
 async function handleDeleteBooks(req, res) {
-
   const { id } = req.params;
+
+
   try {
-    const book = await Book.findOne({ _id: id, email:req.user.email });
+    const book = await Book.findOne({ _id: id });
     if (!book) res.status(400).send('unable to delete book');
     else {
       await Book.findByIdAndDelete(id);
@@ -66,21 +74,17 @@ async function handleDeleteBooks(req, res) {
 
 async function handlePutBooks(req, res) {
   const { id } = req.params;
+
   try {
-    const book = await Book.findOne({ _id: id, email: req.user.email });
+    const book = await Book.findOne({ _id: id });
     if (!book) res.status(400).send('unable to update book');
     else {
-      const updatedBook = await Book.findByIdAndUpdate(id, { ...req.body, email: req.user.email }, { new: true, overwrite: true });
+      const updatedBook = await Book.findByIdAndUpdate(id, { ...req.body }, { new: true, overwrite: true });
       res.status(200).send(updatedBook);
     }
   } catch (e) {
     res.status(500).send('server error');
   }
-}
-
-function handleGetUser(req, res) {
-  console.log('Getting the user');
-  res.send(req.user);
 }
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));

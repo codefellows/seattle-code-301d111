@@ -5,11 +5,11 @@ import Logout from "./Logout";
 
 function AuthButtons() {
 
-  const {
-    isAuthenticated,
-  } = useAuth0();
+  const { isAuthenticated } = useAuth0();
 
-  return isAuthenticated ? <Logout /> : <Login />
+  return isAuthenticated
+    ? <Logout />
+    : <Login />
 }
 
 export default AuthButtons;
