@@ -6,17 +6,15 @@ const Book = require('./models/bookModel.js');
 async function seed() {
   mongoose.connect(process.env.MONGO_URL);
 
-  const HP1 = new Book({
+  await Book.deleteMany({});
+
+  await Book.create({
     title:  'Harry Potter and the Sorcerer\'s Stone',
     description:   'Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry\'s eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin!',
     status: 'read',
     email: 'sara@codefellows.com'
     // change to your email
-  });
-  HP1.save(function (err) {
-    if (err) console.error(err);
-    else console.log('save hp1');
-  });
+  })
 
   // alternately...
   await Book.create({
