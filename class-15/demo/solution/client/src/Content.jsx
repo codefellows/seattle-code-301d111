@@ -1,15 +1,14 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { withAuth0 } from '@auth0/auth0-react';
 
 function Content(props) {
 
   const [books, setBooks] = useState([]);
 
-  useEffect(async () => {
+  useEffect(() => {
 
-    if (props.auth0.isAuthenticated) {
-
+    async function getBooks() {
+      
       const res = await props.auth0.getIdTokenClaims();
       const jwt = res.__raw;
 
@@ -20,11 +19,11 @@ function Content(props) {
         url: '/books'
       }
 
-      const booksResponse = await axios(config);
-
       setBooks(booksResponse.data);
-
     }
+
+    getBooks();
+
   }, []);
 
   return (
@@ -37,5 +36,6 @@ function Content(props) {
       </ul>
     </>
   );
+ }
 
-  export default withAuth0(Content);
+ export default Content;
